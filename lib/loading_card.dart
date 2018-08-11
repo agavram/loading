@@ -10,8 +10,9 @@ import 'package:flutter/material.dart';
 
 class LoadingCard extends StatefulWidget {
   final numberOfLines;
-  LoadingCard({this.numberOfLines});
-  LoadingCardState createState() => LoadingCardState(numberOfLines: numberOfLines);
+  final padding;
+  LoadingCard({this.numberOfLines, this.padding});
+  LoadingCardState createState() => LoadingCardState(numberOfLines: numberOfLines, padding: padding);
 }
 
 class LoadingCardState extends State<LoadingCard>
@@ -21,7 +22,8 @@ class LoadingCardState extends State<LoadingCard>
   Random _rand;
   double _divideFactor;
   int numberOfLines;
-  LoadingCardState({this.numberOfLines});
+  final padding;
+  LoadingCardState({this.padding, this.numberOfLines});
 
   @override
   void initState() {
@@ -59,7 +61,7 @@ class LoadingCardState extends State<LoadingCard>
   Widget build(BuildContext context) {
     return Padding(
       padding:
-          const EdgeInsets.only(left: 8.0, right: 8.0, top: 6.0, bottom: 6.0),
+          padding,
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white,
