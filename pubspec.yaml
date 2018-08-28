@@ -1,6 +1,6 @@
 name: loading_card
-description: A new flutter package project.
-version: 0.0.3
+description: 'A package which displays flashing loading cards while loading content. See this link for an image example: https://imgur.com/a/wFtr7df'
+version: 0.0.4
 author: Adrian Avram <Adrian_Avram@Outlook.com>
 homepage: https://github.com/SurrealShock/loading
 
